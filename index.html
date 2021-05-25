@@ -31,8 +31,8 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#LoginModal">
+                <span class="navbar-text" id="Login-Modal">
+                    <a>
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -173,11 +173,11 @@
                     <img src="img\logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <button class="btn btn-warning align-self-center" style="width: 100%;">
+                    <button class="btn btn-warning align-self-center" style="width: 100%;" id="reserve-table" >
                         <!-- data-toggle="tooltip" data-html="true"
                         title="Or Call us at <br><strong>+91 1234567890</strong>"
                         data-placement="bottom"> -->
-                        <a style="text-decoration: none; color: black; font-weight: 500;" data-toggle="modal" data-target="#revTable">
+                        <a style="text-decoration: none; color: black; font-weight: 500;">
                             Reserve Table
                         </a>
                     </button>
@@ -384,6 +384,14 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+
+            $("#Login-Modal").on('click', function(){
+                $("#LoginModal").modal('show');
+            });
+
+            $("#reserve-table").on('click', function(){
+                $("#revTable").modal('show');
             });
         });
 
